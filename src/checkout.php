@@ -1,24 +1,23 @@
 <?php
 
 class CheckOut{
-	$books = [
-		"Real-World Solutions for Developing High-Quality PHP Framework and Applications",
+	private $books = array( "Real-World Solutions for Developing High-Quality PHP Framework and Applications",
 		"Lean Architecture for Agile Software Development",
 		"Patterns of Enterprise Application Architecture",
 		"Don't make me think!",
 		"101 Design Ingredients",
 		"Extreme Programming Installed"
-	];
-	$disc = ["Bodyslam Album คราม"];
-	$numbook;
-	$numDisc;
-	$type_member;
+	);
+	private $disc = array("Bodyslam Album คราม");
+	private $numbook;
+	private $numDisc;
+	private $type_member;
 	/*
 	Input: 
 		- ???
 	}
 	*/
-	function __construct($numbook, $numDisc, $type_member){
+	function __construct( $numbook, $numDisc, $type_member){
 		$this->numbook = $numbook;
 		$this->numDisc = $numDisc;
 		$this->type_member = $type_member;
