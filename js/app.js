@@ -3,8 +3,8 @@ var ShowList = function(){
 	var strTable;
 	var Nub=1;
 	//var Result = $.cookie("result");
-	var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
-	//var Result = localStorage.getItem("result");
+	//var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
+	var Result = localStorage.getItem("result");
 
 	strTable = "<table id='tab'>";
 	strTable = strTable+"<thread><tr>";
