@@ -3,8 +3,10 @@ var ShowList = function(){
 	var strTable;
 	var Nub=1;
 	//var Result = $.cookie("result");
-	var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
-	//var Result = localStorage.getItem("result");
+	//var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
+	var Result = JSON.parse(localStorage.getItem("result"));
+
+	console.log(Result.list_book);
 
 	strTable = "<table id='tab'>";
 	strTable = strTable+"<thread><tr>";
@@ -16,6 +18,7 @@ var ShowList = function(){
 			strTable = strTable+"<td>" + Result.list_book[i] +"</td>";
 			strTable = strTable+"</tr>"
 			Nub++;
+			console.log(strTable)
 	}
 	for(i=1;i<Result.list_cd.length;i++){
 			strTable = strTable+"<tr><td>" + Nub +"</td>";
@@ -24,11 +27,12 @@ var ShowList = function(){
 			Nub++;
 	}
 	strTable = strTable+"</table>" ;
+	console.log(strTable);
 	$("#item").append(strTable);
 };
 
 var clickPurchase = function(data){
-	$.post( "./src/checkout.php", function( data ) {
+	$.post( "./src/checkout.php", data).success(function( data ) {
 	  /* 
 	  	data = {
 					count_book =  4,

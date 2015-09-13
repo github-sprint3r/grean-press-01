@@ -21,9 +21,7 @@
 			width: 50px;
 		}
 	</style>
-	<script type="text/javascript">
-		ShowList();
-	</script>
+	
 <body>
 	<h1>List of Items</h1>
 	<div id ="item">
@@ -31,6 +29,8 @@
 	<h2 id="result"></h2>
 	<script type="text/javascript">
 		$("#tab").addClass("table table-bordered");
+	</script><script type="text/javascript">
+		ShowList();
 	</script>
 </body>
 </html>
