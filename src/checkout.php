@@ -12,7 +12,6 @@ class CheckOut{
 	private $numbook;
 	private $numDisc;
 	private $type_member;
-
 	function __construct( $numbook, $numDisc, $type_member){
 		$this->numbook = (int) $numbook;
 		$this->numDisc = (int) $numDisc;
@@ -21,8 +20,8 @@ class CheckOut{
 
 	function getText(){
 		// VIP ?
-		if( ! checkUserVIP($this->type_member) ) return "เสียค่าจัดส่งสินค้า";
-		if( $this->numbook < 5 ) return "เสียค่าจัดส่งสิ้นค้า";
+		if( ! $this->checkUserVIP($this->type_member) ) return "เสียค่าจัดส่งสินค้า";
+		if( $this->numbook < 5 ) return "เสียค่าจัดส่งสินค้า";
 		return "ฟรีค่าจัดส่งสินค้า";
 	}
 
