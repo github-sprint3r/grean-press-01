@@ -29,7 +29,7 @@ class CheckoutTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($this->freeResultText, $checkoutResult->result_text);
     }
 
-    public function testVIPBuyFourBookShippingCostShouldNotBeFree()
+    public function testVIPBuyFourBookOneCDShippingCostShouldNotBeFree()
     {
         // 4 Books
         // 1 CD
@@ -37,6 +37,18 @@ class CheckoutTest extends PHPUnit_Framework_TestCase
         $checkout = new CheckOut(4, 1, 1);
 
         $this->assertEquals($this->notFreeResultText, $checkout->getText());
+    }
+
+    public function testVIPBuyFourBookOneCDShippingResultCostShouldNotBeFree()
+    {
+        // 4 Books
+        // 1 CD
+        // VIP = 1
+        $checkout = new CheckOut(4, 1, 1);
+
+        $checkoutResult = json_decode($checkout->checkOutResult());
+
+        $this->assertEquals($this->notFreeResultText, $checkoutResult->result_text);
     }
 
     public function testRegularMemberBuyFiveBookShippingShouldNotBeFree(){
