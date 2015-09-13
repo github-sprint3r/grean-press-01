@@ -1,14 +1,14 @@
 <?php
 
 class CheckOut{
-	private $books = array( "Real-World Solutions for Developing High-Quality PHP Framework and Applications",
+	private $books = [ "Real-World Solutions for Developing High-Quality PHP Framework and Applications",
 		"Lean Architecture for Agile Software Development",
 		"Patterns of Enterprise Application Architecture",
 		"Don't make me think!",
 		"101 Design Ingredients",
 		"Extreme Programming Installed"
-	);
-	private $disc = array("Bodyslam Album คราม");
+	];
+	private $disc = ["Bodyslam Album คราม"];
 	private $numbook;
 	private $numDisc;
 	private $type_member;
