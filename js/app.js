@@ -4,35 +4,35 @@ var ShowList = function(){
 	var Nub=1;
 	//var Result = $.cookie("result");
 	//var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
-	var Result = localStorage.getItem("result");
+	var Result = JSON.parse(localStorage.getItem("result"));
 
 	strTable = "<table id='tab'>";
 	strTable = strTable+"<thread><tr>";
 	strTable = strTable+"<td>No.</td>";
 	strTable = strTable+"<td>Name</td></tr></thread>";
 
-	for(i=1;i<Result.list_book.length;i++){
+	for(i=0;i<Result.list_book.length;i++){
 			strTable = strTable+"<tr><td>" + Nub +"</td>";
 			strTable = strTable+"<td>" + Result.list_book[i] +"</td>";
 			strTable = strTable+"</tr>"
 			Nub++;
+			console.log(strTable)
 	}
-	for(i=1;i<Result.list_cd.length;i++){
+	for(i=0;i<Result.list_cd.length;i++){
 			strTable = strTable+"<tr><td>" + Nub +"</td>";
 			strTable = strTable+"<td>" + Result.list_cd[i] +"</td>";
 			strTable = strTable+"</tr>"
 			Nub++;
 	}
 	strTable = strTable+"</table>" ;
+	console.log(strTable);
 	$("#item").append(strTable);
-
-
 
 	$("#result").append(Result.result_text);
 };
 
 var clickPurchase = function(data){
-	$.post( "/src/checkout.php", function( data ) {
+	$.post( "./src/checkout.php", data).success(function( data ) {	
 	  /* 
 	  	data = {
 					count_book =  4,
