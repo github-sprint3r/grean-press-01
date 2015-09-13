@@ -8,10 +8,8 @@ var clickPurchase = function(data){
 	  			}
 
 	  */
-
 	  $.cookie('result',data);
+	  window.location = "./result.php";
 	});
-
-
 
 };
