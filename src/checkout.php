@@ -31,7 +31,9 @@ class CheckOut{
 		return "ฟรีค่าจัดส่งสินค้า";
 	}
 
-	function getBooks(){}
+	function getBooks(){
+		array_slice($this->books, 0, $this->numbook);
+	}
 
 
 	function checkUserVIP($uid){
