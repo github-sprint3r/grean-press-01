@@ -26,4 +26,10 @@ class CheckoutTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals($this->notFreeResultText, $checkout->getText());
     }
+
+    public function testRegularMemberBuyFiveBookShippingShouldNotBeFree(){
+        $checkout = new CheckOut(5,0,0);
+        $this->assertEquals($this->notFreeResultText,$checkout->getText());
+    }
+
 }
