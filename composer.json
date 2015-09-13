@@ -1,0 +1,12 @@
+{
+    "name": "longcat/grean-press-01",
+    "require": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "authors": [
+        {
+            "name": "Pichaya Morimoto",
+            "email": "pich4ya@googlemail.com"
+        }
+    ]
+}
