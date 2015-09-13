@@ -11,16 +11,16 @@ class CheckOut{
 	];
 	$disc = ["Bodyslam Album คราม"];
 	$numbook;
-	$numcd;
+	$numDisc;
 	$type_member;
 	/*
 	Input: 
 		- ???
 	}
 	*/
-	function __construct($numbook, $numcd, $type_member){
+	function __construct($numbook, $numDisc, $type_member){
 		$this->numbook = $numbook;
-		$this->numcd = $numcd;
+		$this->numDisc = $numDisc;
 		$this->type_member = $type_member;
 	}
 
@@ -32,7 +32,11 @@ class CheckOut{
 	}
 
 	function getBooks(){
-		array_slice($this->books, 0, $this->numbook);
+		return array_slice($this->books, 0, $this->numbook);
+	}
+
+	function getDisc(){
+		return array_slice($this->disc,0, $this->numDisc);
 	}
 
 
