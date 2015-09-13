@@ -13,7 +13,7 @@ class CheckOut{
 	private $numDisc;
 	private $type_member;
 	/*
-	Input: 
+	Input:
 		- ???
 	}
 	*/
@@ -25,7 +25,7 @@ class CheckOut{
 
 	function getText(){
 		// VIP ?
-		if( ! checkUserVIP($this->type_member) ) return "เสียค่าจัดส่งสินค้า";
+		if( ! $this->checkUserVIP($this->type_member) ) return "เสียค่าจัดส่งสินค้า";
 		if( $this->numbook < 5 ) return "เสียค่าจัดส่งสิ้นค้า";
 		return "ฟรีค่าจัดส่งสินค้า";
 	}
