@@ -12,7 +12,7 @@ class CheckoutTest extends PHPUnit_Framework_TestCase
         // 5 Books
         // 1 CD
         // VIP = 1
-        $checkout = new CheckOut(5, [], 1);
+        $checkout = new CheckOut(5, 1, 1);
 
         $this->assertEquals($this->freeResultText, $checkout->getText());
     }
@@ -22,7 +22,7 @@ class CheckoutTest extends PHPUnit_Framework_TestCase
         // 4 Books
         // 1 CD
         // VIP = 1
-        $checkout = new CheckOut(4, [], 1);
+        $checkout = new CheckOut(4, 1, 1);
 
         $this->assertEquals($this->notFreeResultText, $checkout->getText());
     }

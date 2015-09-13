@@ -26,7 +26,7 @@ class CheckOut{
 	function getText(){
 		// VIP ?
 		if( ! $this->checkUserVIP($this->type_member) ) return "เสียค่าจัดส่งสินค้า";
-		if( $this->numbook < 5 ) return "เสียค่าจัดส่งสิ้นค้า";
+		if( $this->numbook < 5 ) return "เสียค่าจัดส่งสินค้า";
 		return "ฟรีค่าจัดส่งสินค้า";
 	}
 
