@@ -30,12 +30,12 @@
 
 						var member_type = $('#customer_type_regular').is(":checked");					
 						if(member_type){
-							param_obj.member_type = $('#customer_type_regular').val();
+							param_obj.customer_type = $('#customer_type_regular').val();
 						}else{
-							param_obj.member_type = $('#customer_type_vip').val();
+							param_obj.customer_type = $('#customer_type_vip').val();
 						}						
-						param_obj.count_book = $('#book_number').val();
-						param_obj.count_cd = $('#cd_number').val();
+						param_obj.book_number = $('#book_number').val();
+						param_obj.cd_number = $('#cd_number').val();
 
 						var isConf = confirm(' ยืนยันการ สั่งซื้อ');
 						if(isConf){
