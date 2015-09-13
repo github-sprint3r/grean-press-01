@@ -11,7 +11,7 @@
 		<fieldset>
 			<legend>เลือกสินค้า ภายในร้าน</legend>
 				<label>ประเภทลูกค้า</label><br/>
-				<input type="radio" name="customer_type" id="customer_type_regular" value="regular"/>ลูกค้าทั่วไป
+				<input type="radio" name="customer_type" id="customer_type_regular" value="regular" checked/>ลูกค้าทั่วไป
 				<input type="radio" name="customer_type" id="customer_type_vip"value="vip"/>ลูกค้า VIP
 				<hr/>
 				<label>จำนวน Book</label>
@@ -39,6 +39,7 @@
 
 						var isConf = confirm(' ยืนยันการ สั่งซื้อ');
 						if(isConf){
+							console.log(param_obj);
 							clickPurchase(param_obj);							
 						}
 						return false;
