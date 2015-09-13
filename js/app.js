@@ -6,7 +6,6 @@ var ShowList = function(){
 	//var Result ={ list_book:["ios","book","php"],list_cd : ['1','2'],member_type : ['free'] };
 	var Result = JSON.parse(localStorage.getItem("result"));
 
-	console.log(Result.list_book);
 
 	strTable = "<table id='tab'>";
 	strTable = strTable+"<thread><tr>";
@@ -29,6 +28,8 @@ var ShowList = function(){
 	strTable = strTable+"</table>" ;
 	console.log(strTable);
 	$("#item").append(strTable);
+
+	$("#result").append(Result.result_text);
 };
 
 var clickPurchase = function(data){
