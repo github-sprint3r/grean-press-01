@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 	<title>ระบบร้านขายหนังสือออนไลน์</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
 	<form action="" method="post">
