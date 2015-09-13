@@ -11,8 +11,8 @@
 		<fieldset>
 			<legend>เลือกสินค้า ภายในร้าน</legend>
 				<label>ประเภทลูกค้า</label><br/>
-				<input type="radio" name="customer_type" id="customer_type_regular" value="regular" checked/>ลูกค้าทั่วไป
-				<input type="radio" name="customer_type" id="customer_type_vip"value="vip"/>ลูกค้า VIP
+				<input type="radio" name="customer_type" id="customer_type_regular" value="0" checked/>ลูกค้าทั่วไป
+				<input type="radio" name="customer_type" id="customer_type_vip" value="1"/>ลูกค้า VIP
 				<hr/>
 				<label>จำนวน Book</label>
 				<input type="number" name="book_number" id="book_number"/><br/>
